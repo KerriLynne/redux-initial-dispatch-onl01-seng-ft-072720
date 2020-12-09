@@ -1,6 +1,8 @@
-let state = {count: 0};
+//declaring our statel
+let state;
 
-function changeState(state, action){
+//assign a value to our initial state instead of assigning to a variable above
+function changeState(state = { count: 0 }, action) {
     switch (action.type) {
       case 'INCREASE_COUNT':
         return {count: state.count + 1}
@@ -17,3 +19,5 @@ function dispatch(action){
 function render(){
     document.body.textContent = state.count
 }
+
+dispatch({ type: 'gemi' })
